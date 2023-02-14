@@ -1,8 +1,9 @@
 "use strict"
 
 import * as Map from "./modules/mapgen.mjs"
-const prompt = require("prompt-sync")()
-// TIME SPENT: 5ish HOURS MAYBE
+import PromptSync from "prompt-sync"
+const prompt = promptSync()
+// TIME SPENT: 6 HOURS
 
 /*class Room {
     constructor(type) {
