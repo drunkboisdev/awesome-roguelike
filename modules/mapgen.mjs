@@ -9,4 +9,4 @@ function generateMap(size) {
     return map
 }
 
-export {map}
+export {generateMap}
