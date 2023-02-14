@@ -1,5 +1,6 @@
 "use strict"
 
+import * as Map from "./modules/mapgen.mjs"
 const prompt = require("prompt-sync")()
 // TIME SPENT: 5ish HOURS MAYBE
 
@@ -63,7 +64,7 @@ function battle(floorNum) {
 
 function game() {
     console.log("hi")
-    const map = generateMap(5, 1)
+    const map = Map.generateMap(5)
 }
 
 console.log("\nit's time for our trials to begin.")
