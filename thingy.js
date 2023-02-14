@@ -1,4 +1,5 @@
 const prompt = require("prompt-sync")()
+// TIME SPENT: 5ish HOURS MAYBE
 
 /*class Room {
     constructor(type) {

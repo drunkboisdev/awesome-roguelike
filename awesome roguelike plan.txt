@@ -52,7 +52,7 @@ release 0.4.1
 
 release 0.5 alpha
 
-JULY
+AUGUST
 - fix 0.5 yeah
 release 0.5.1
 
@@ -62,12 +62,12 @@ release 0.5.1
 
 release 0.6 alpha
 
+SEPTEMBER
 - finish upgrade system (lite ver)
   - a singular upgrade path
 
 release 0.7 beta
 
-AUGUST
 - fix 0.7
 release 0.7.1
 
@@ -75,7 +75,7 @@ release 0.7.1
 
 release 0.8 rc
 
-SEPTEMBER
+OCTOBER
 - fix 0.8 if needed
 release 0.9 rc
 
