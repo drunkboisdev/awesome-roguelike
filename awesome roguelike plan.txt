@@ -1,4 +1,4 @@
-FEBRUARY
+FEBRUARY 
 - finish mazegen algorithm
 - add exploring functionalities (personal map, rooms hidden before reaching them)
 - add basic commands

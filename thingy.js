@@ -1,4 +1,4 @@
-"use strict";
+"use strict"
 
 const prompt = require("prompt-sync")()
 // TIME SPENT: 5ish HOURS MAYBE
