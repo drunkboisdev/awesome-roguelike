@@ -2,7 +2,7 @@
 
 import * as Map from "./modules/mapgen.mjs"
 import PromptSync from "prompt-sync"
-const prompt = promptSync()
+const prompt = PromptSync()
 // TIME SPENT: 6 HOURS
 
 /*class Room {
@@ -66,6 +66,7 @@ function battle(floorNum) {
 function game() {
     console.log("hi")
     const map = Map.generateMap(5)
+    displayMap(map)
 }
 
 console.log("\nit's time for our trials to begin.")
