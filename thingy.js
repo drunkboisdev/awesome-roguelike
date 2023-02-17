@@ -2,8 +2,8 @@
 
 import * as Map from "./modules/mapgen.mjs"
 import PromptSync from "prompt-sync" // i have no idea how this works and i'm too scared to ask
-const prompt = PromptSync()
-// TIME SPENT: 6 HOURS
+const prompt = PromptSync() // "esm default" "commonjs" "module.export()" none of these words are in the bible
+// TIME SPENT: 7 HOURS
 
 /*class Room {
     constructor(type) {

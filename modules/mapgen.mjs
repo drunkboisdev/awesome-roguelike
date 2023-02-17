@@ -20,36 +20,50 @@ function generateMap(size) {
     
     // wilson's algo
     // initial values
-    let start = [1, 1]
     let end = [map.length-2, map[0].length-2]
     let visiting = [1,1]
+    let walk = [[1,1]]
 
-    let walk = [start]
     // loop-erased random walk
     while (!areCoordsEqual(visiting, end)) {
         const rand = Math.random()
+
+        // randomly walking
         if (rand < 0.25) {
             visiting = [walk[walk.length-1][0] + 2, walk[walk.length-1][1]]
             if (visiting[0] < map[0].length) {
+                walk.push([visiting[0]-1, visiting[1]])
                 walk.push(visiting)
             }
         } else if (rand < 0.5) {
             visiting = [walk[walk.length-1][0], walk[walk.length-1][1] + 2]
             if (visiting[1] < map[1].length) {
+                walk.push([visiting[0], visiting[1]-1])
                 walk.push(visiting)
             }
         } else if (rand < 0.75) {
             visiting = [walk[walk.length-1][0] - 2, walk[walk.length-1][1]]
             if (visiting[0] > 0) {
+                walk.push([visiting[0]+1, visiting[1]])
                 walk.push(visiting)
             }
         } else {
             visiting = [walk[walk.length-1][0], walk[walk.length-1][1] - 2]
             if (visiting[1] > 0) {
+                walk.push([visiting[0], visiting[1]+1])
                 walk.push(visiting)
             }
         }
         console.log(walk)
+
+        // destroy loops
+        for (let i = 0; i < walk.length - 1; i += 2) {
+            if (areCoordsEqual(walk[i], walk[walk.length-1])) {
+                for (let j = walk.length - 1; j > i; j--) {
+                    walk.pop()
+                }
+            }
+        }
     }
 
     return map
