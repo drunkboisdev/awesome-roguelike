@@ -5,40 +5,6 @@ import PromptSync from "prompt-sync" // i have no idea how this works and i'm to
 const prompt = PromptSync() // "esm default" "commonjs" "module.export()" none of these words are in the bible
 // TIME SPENT: 7 HOURS
 
-/*class Room {
-    constructor(type) {
-        this.type = type
-    }
-    connect() {
-
-    }
-}*/
-
-function battle(floorNum) {
-    let enemies = []
-    for (let i = 0; i < 5; i++) {
-        let enemyType = Math.floor(Math.random() * (10 - floorNum))
-        if (enemyType < 4) {
-            enemies.push(enemyType)
-            continue
-        }
-        if (enemies.length === 0 && i === 4) { // to guarantee at least one enemy
-            i--
-        }
-    }
-    for (let i = 0; i < enemies.length; i++) {
-        let tier = Math.floor((Math.random() * 5 + 1) * Math.pow(floorNum, 2))
-
-        if (tier < 20) {
-            // keep tier 1 enemies from turning into tier 2 enemies
-        } else if (tier < 50) {
-            enemies[i] += 5
-        } else if (tier < 150) {
-            enemies[i] += 10
-        }
-    }
-}
-
 function game() {
     console.log("hi")
     const map = Map.generateMap(5)
