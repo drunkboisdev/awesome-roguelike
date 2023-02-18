@@ -54,7 +54,6 @@ function generateMap(size) {
                 walk.push(visiting)
             }
         }
-        console.log(walk)
 
         // destroy loops
         for (let i = 0; i < walk.length - 1; i += 2) {
@@ -66,27 +65,44 @@ function generateMap(size) {
         }
     }
 
+    // make changes to map
+    for (let i = 0; i < walk.length; i++) {
+        if (walk[i][0] % 2 === 0 || walk[i][1] % 2 === 0) {
+            map[walk[i][0]][walk[i][1]] = 1
+        }
+        map[walk[i][0]][walk[i][1]] = 2
+    }
+
     return map
 }
 
 function displayMap() {
-    for (let i = 0; i < 11; i++) {
-        for (let j = 0; j < 11; j++) {
-            if (map[i][j] === 0) {
-                process.stdout.write("██")
-            } else if (map[i][j] === 3) {
-                process.stdout.write("Tr")
-            } else if (map[i][j] === 4) {
-                process.stdout.write("Sh")
-            } else if (map[i][j] === 5) {
-                process.stdout.write("En")
-            } else if (map[i][j] === 6) {
-                process.stdout.write("St")
-            } else if (map[i][j] === 7) {
-                process.stdout.write("Fn")
-            }
-            else {
-                process.stdout.write("  ")
+    for (let i = 0; i < map.length; i++) {
+        for (let j = 0; j < map[0].length; j++) {
+            switch (map[i][j]) {
+                case 0:
+                    process.stdout.write("██")
+                    break
+                case 1:
+                    process.stdout.write("hi")
+                    break
+                case 3:
+                    process.stdout.write("Tr")
+                    break
+                case 4:
+                    process.stdout.write("Sh")
+                    break
+                case 5:
+                    process.stdout.write("En")
+                    break
+                case 6:
+                    process.stdout.write("St")
+                    break
+                case 7:
+                    process.stdout.write("Fn")
+                    break
+                default:
+                    process.stdout.write("  ")
             }
         }
         process.stdout.write("\n")
