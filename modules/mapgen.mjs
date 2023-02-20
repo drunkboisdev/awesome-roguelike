@@ -9,17 +9,31 @@ function areCoordsEqual(xy1, xy2) {
 
 function generateMap(size) {
     size = size * 2 + 1
+    let unvisitedCells = []
+    let visitedCells = []
 
     // generate a matrix
     for (let i = 0; i < size; i++) {
         map[i] = []
         for (let j = 0; j < size; j++) {
             map[i][j] = 0
+            unvisitedCells[i] = [i, j]
         }
     }
     
-    // wilson's algo
+    // wilson's algo but it only repeats 4 times instead of filling the whole thing
+    for (let i = 0; i < 4; i++) {
+        let start, end
+        if (!i) { // :trollface:
+            start = [1,1]
+            end = [map.length-2, map[0].length-2]
+        } else {
+            start = unvisitedCells[Math.floor(Math.random() * unvisitedCells.length)]
+            
+        }
+    }
     // initial values
+    let start = [1,1]
     let end = [map.length-2, map[0].length-2]
     let visiting = [1,1]
     let walk = [[1,1]]
@@ -65,12 +79,19 @@ function generateMap(size) {
         }
     }
 
-    // make changes to map
+    // make changes to map (and unvisited cells)
     for (let i = 0; i < walk.length; i++) {
         if (walk[i][0] % 2 === 0 || walk[i][1] % 2 === 0) {
             map[walk[i][0]][walk[i][1]] = 1
+        } else {
+            map[walk[i][0]][walk[i][1]] = 2
         }
-        map[walk[i][0]][walk[i][1]] = 2
+        // if walk and unvisitedcells share elements, remove them from unvisitedCells
+        for (let j = 0; j < unvisitedCells.length; j++) {
+            if (areCoordsEqual(walk[i], unvisitedCells[j])) {
+                unvisitedCells.splice(j, 1)
+            }
+        }
     }
 
     return map
@@ -82,9 +103,6 @@ function displayMap() {
             switch (map[i][j]) {
                 case 0:
                     process.stdout.write("██")
-                    break
-                case 1:
-                    process.stdout.write("hi")
                     break
                 case 3:
                     process.stdout.write("Tr")
