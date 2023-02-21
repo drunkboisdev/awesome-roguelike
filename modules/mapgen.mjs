@@ -22,16 +22,6 @@ function generateMap(size) {
     }
     
     // wilson's algo but it only repeats 4 times instead of filling the whole thing
-    for (let i = 0; i < 4; i++) {
-        let start, end
-        if (!i) { // :trollface:
-            start = [1,1]
-            end = [map.length-2, map[0].length-2]
-        } else {
-            start = unvisitedCells[Math.floor(Math.random() * unvisitedCells.length)]
-            
-        }
-    }
     // initial values
     let start = [1,1]
     let end = [map.length-2, map[0].length-2]

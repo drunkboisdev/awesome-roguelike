@@ -3,7 +3,7 @@
 import * as Map from "./modules/mapgen.mjs"
 import PromptSync from "prompt-sync" // i have no idea how this works and i'm too scared to ask
 const prompt = PromptSync() // "esm default" "commonjs" "module.export()" none of these words are in the bible
-// TIME SPENT: 8 HOURS
+// TIME SPENT: 9 HOURS
 
 function game() {
     console.log("hi")
