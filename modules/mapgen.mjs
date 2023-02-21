@@ -71,6 +71,9 @@ function generateMap(size) {
                     }
                 }
             }
+            if (map[walk[walk.length-1][0]][walk[walk.length-1][1]] === 2) {
+                break
+            }
         }
 
         // make changes to map (and unvisited cells)
@@ -89,12 +92,13 @@ function generateMap(size) {
         }
 
         // update variables for next pass
-        start = walk[Math.floor(Math.random() * walk.length / 2) * 2]
-        end = unvisitedCells[Math.floor(Math.random() * unvisitedCells.length)]
-        console.log(walk)
-        console.log(unvisitedCells)
+        start = unvisitedCells[Math.floor(Math.random() * unvisitedCells.length)]
+        end = walk[Math.floor(Math.random() * walk.length / 2) * 2]
+        //console.log(walk)
+        //console.log(unvisitedCells)
         visiting = start
         walk = [start]
+        displayMap()
         console.log(`s: ${start}`)
         console.log(`e: ${end}`)
     }
