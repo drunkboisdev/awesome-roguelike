@@ -10,18 +10,21 @@ function areCoordsEqual(xy1, xy2) {
 function generateMap(size) {
     size = size * 2 + 1
     let unvisitedCells = []
-    let visitedCells = []
 
     // generate a matrix
     for (let i = 0; i < size; i++) {
         map[i] = []
         for (let j = 0; j < size; j++) {
             map[i][j] = 0
-            unvisitedCells[i] = [i, j]
         }
     }
-    
-    // wilson's algo but it only repeats 4 times instead of filling the whole thing
+
+    for (let i = 1; i < size; i += 2) {
+        for (let j = 1; j < size; j += 2) {
+            unvisitedCells[Math.floor((i - 1) / 2 * (size - 1) / 2 + (j - 1) / 2)] = [i, j]
+        }
+    }
+
     // initial values
     let start = [1,1]
     let end = [map.length-2, map[0].length-2]
