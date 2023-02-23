@@ -6,7 +6,6 @@ const prompt = PromptSync() // "esm default" "commonjs" "module.export()" none o
 // TIME SPENT: 11 HOURS
 
 function game() {
-    console.log("hi")
     const map = Map.generateMap(5)
     Map.displayMap()
 }
