@@ -1,0 +1,177 @@
+{
+    "hit": {
+        "damage": 1,
+        "words": [
+            "hit", "bam", "pop"
+        ],
+        "strongDamage": 2,
+        "strongWords": [
+            "smack", "punch", "attack"
+        ],
+        "tier": 1
+    },
+    "slash": {
+        "damage": 3,
+        "words": [
+            "slash", "swing", "stab"
+        ],
+        "strongDamage": 5,
+        "strongWords": [
+            "big slash"
+        ],
+        "tier": 2,
+        "prevTier": "hit"
+    },
+    "destruction": {
+        "damage": 7,
+        "words": [
+            "destruction"
+        ],
+        "strongDamage": 11,
+        "strongWords": [
+            "big destruction"
+        ],
+        "tier": 3,
+        "prevTier": "slash"
+    },
+    "ember": {
+        "damage": 3,
+        "words": [
+            "fire", "blaze", "burn"
+        ],
+        "strongDamage": 5,
+        "strongWords": [
+            "blister", "combust", "scorch"
+        ],
+        "tier": 1
+    },
+    "fire": {
+        "damage": 6,
+        "words": [
+            "how'd you win all that won kid"
+        ],
+        "strongDamage": 9,
+        "strongWords": [
+            "but not custody of one kid"
+        ],
+        "tier": 2,
+        "prevTier": "ember"
+    },
+    "inferno": {
+        "damage": 10,
+        "words": [
+            "welcome to your final test"
+        ],
+        "strongDamage": 16,
+        "strongWords": [
+            "i'm mr beast"
+        ],
+        "tier": 3,
+        "prevTier": "fire"
+    },
+    "water": {
+        "damage": 3,
+        "words": [
+            "rain", "ocean", "tide"
+        ],
+        "strongDamage": 5,
+        "strongWords": [
+            "geyser", "tsunami", "drizzle"
+        ],
+        "tier": 1
+    },
+    "current": {
+        "damage": 6,
+        "words": [
+            "so this is the next game"
+        ],
+        "strongDamage": 11,
+        "strongWords": [
+            "they'll make us fight in for survival"
+        ],
+        "tier": 2,
+        "prevTier": "water"
+    },
+    "flood": {
+        "damage": 9,
+        "words": [
+            "but instead of a kiddie game"
+        ],
+        "strongDamage": 14,
+        "strongWords": [
+            "we'll be fighting this manchild"
+        ],
+        "tier": 3,
+        "prevTier": "current"
+    },
+    "earth": {
+        "damage": 3,
+        "words": [
+            "quake", "slide", "erupt"
+        ],
+        "strongDamage": 5,
+        "strongWords": [
+            "volcano", "mountain", "tectonic"
+        ],
+        "tier": 1
+    },
+    "crust": {
+        "damage": 6,
+        "words": [
+            "i'm like your momma"
+        ],
+        "strongDamage": 10,
+        "strongWords": [
+            "i'm dead sick"
+        ],
+        "tier": 2,
+        "prevTier": "earth"
+    },
+    "core": {
+        "damage": 11,
+        "words": [
+            "did you think you'd get her back with that lighter you bought her"
+        ],
+        "strongDamage": 15,
+        "strongWords": [
+            "you're playing tug-of-war with your ex but the rope is your daughter"
+        ],
+        "tier": 3,
+        "prevTier": "crust"
+    },
+    "wind": {
+        "damage": 3,
+        "words": [
+            "gust", "wind", "blow"
+        ],
+        "strongDamage": 5,
+        "strongWords": [
+            "tornado", "lightning", "hurricane"
+        ],
+        "tier": 1
+    },
+    "storm": {
+        "damage": 6,
+        "words": [
+            "so stupid"
+        ],
+        "strongDamage": 9,
+        "strongWords": [
+            "sang woo showed you the light"
+        ],
+        "tier": 2,
+        "prevTier": "wind"
+    },
+    "cyclone": {
+        "damage": 8,
+        "words": [
+            "you didn't go to snu"
+        ],
+        "strongDamage": 14,
+        "strongWords": [
+            "that's right"
+        ],
+        "tier": 3,
+        "prevTier": "storm"
+    }
+}
