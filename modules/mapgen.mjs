@@ -7,6 +7,26 @@ function areCoordsEqual(xy1, xy2) {
     return false
 }
 
+function setRooms() {
+    for (let i = 1; i < map.length; i += 2) {
+        for (let j = 1; j < map[0].length; j += 2) {
+            const rand = Math.random()
+
+            if (rand < 0.4) {
+                map[i][j] = 5
+            } else if (rand < 0.45) {
+                map[i][j] = 6
+            } else if (rand < 0.5) {
+                map[i][j] = 7
+            } else if (rand < 0.6) {
+                map[i][j] = 8
+            }
+        }
+    }
+    map[1][1] = 3
+    map[map.length-2][map[0].length-2] = 4
+}
+
 function generateMap(size) {
     size = size * 2 + 1
     let unvisitedCells = []
@@ -107,57 +127,4 @@ function generateMap(size) {
     return map
 }
 
-function setRooms() {
-    for (let i = 1; i < map.length; i += 2) {
-        for (let j = 1; j < map[0].length; j += 2) {
-            const rand = Math.random()
-
-            if (rand < 0.6) {
-                map[i][j] = 5
-            } else if (rand < 0.65) {
-                map[i][j] = 6
-            } else if (rand < 0.7) {
-                map[i][j] = 7
-            } else if (rand < 0.8) {
-                map[i][j] = 8
-            }
-        }
-    }
-    map[1][1] = 3
-    map[map.length-2][map[0].length-2] = 4
-}
-
-function displayMap() {
-    for (let i = 0; i < map.length; i++) {
-        for (let j = 0; j < map[0].length; j++) {
-            switch (map[i][j]) {
-                case 0:
-                    process.stdout.write("██")
-                    break
-                case 3:
-                    process.stdout.write("St")
-                    break
-                case 4:
-                    process.stdout.write("Fn")
-                    break
-                case 5:
-                    process.stdout.write("En")
-                    break
-                case 6:
-                    process.stdout.write("Tr")
-                    break
-                case 7:
-                    process.stdout.write("Sh")
-                    break
-                case 8:
-                    process.stdout.write("Ch")
-                    break
-                default:
-                    process.stdout.write("  ")
-            }
-        }
-        process.stdout.write("\n")
-    }
-}
-
-export {generateMap, displayMap}
+export {generateMap}
