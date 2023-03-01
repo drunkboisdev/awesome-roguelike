@@ -1,6 +1,7 @@
+## what is this?
 awesome roguelike is a text adventure-styled game, playable in Command Prompt/Powershell/whatever terminal you like. currently, it is under development, but once a beta version is finished, the game will be available to download!
 
-some answers to hypothetical questions:
+## some answers to hypothetical questions:
 q: how long will it take to be released?
 a: i'm planning for a full release in early october (i don't work very quickly), but beta versions will be available earlier than that (maybe mid-september?)
 
@@ -10,9 +11,7 @@ a: there is only one programmer (me), but i hope to get some playtesters once i 
 q: who are you?
 a: my name is walter hartwell white. i live at 308 negra arroyo lan
 
-
-
-how to play
+## how to play
 right/down/left/up - directional movement
 map - show a map of the current floor
 stats - show your current stats
