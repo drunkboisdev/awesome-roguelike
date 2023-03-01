@@ -12,9 +12,9 @@ q: who are you?
 a: my name is walter hartwell white. i live at 308 negra arroyo lan
 
 ## how to play
-right/down/left/up - directional movement
-map - show a map of the current floor
-stats - show your current stats
-quit - quit the game. don't worry, there is no save data to be lost (yet)!
+- right/down/left/up - directional movement
+- map - show a map of the current floor
+- stats - show your current stats
+- quit - quit the game. don't worry, there is no save data to be lost (yet)!
 
 good luck and Have Fun!!!
