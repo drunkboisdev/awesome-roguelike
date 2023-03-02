@@ -1,3 +1,4 @@
+// time spent: 8h?
 let map = []
 
 function areCoordsEqual(xy1, xy2) {

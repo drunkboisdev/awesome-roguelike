@@ -1,9 +1,11 @@
 "use strict"
 
 import * as Map from "./modules/mapgen.mjs"
+import * as Battle from "./modules/battle.mjs"
 import PromptSync from "prompt-sync" // i have no idea how this works and i'm too scared to ask
 const prompt = PromptSync() // "esm default" "commonjs" "module.export()" none of these words are in the bible
-// TIME SPENT: 14.5 HOURS
+// TOTAL TIME SPENT: 15 HOURS
+// awesomeroguelike.js time spent: 7 hours
 
 function matToCellCoords(xy) {
     return (xy + 1) / 2
@@ -212,6 +214,9 @@ async function game() {
                 } else {
                     console.log("there's a wall there!")
                 }
+                break
+            case "eg":
+                console.log(Battle.generateEnemies(1))
                 break
             case "easteregg":
                 if (!easteregg) {
